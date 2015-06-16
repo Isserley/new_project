@@ -8,4 +8,18 @@ moneyButton.addEventListener('click', function() {
 console.log(totalMoney);
 });
 
-// console.log(totalMoney);
+var moneySpent = document.getElementById('money_spent');
+var moneySpentButton = document.getElementById('money_spent_button');
+var totalSpent = 0;
+
+moneySpentButton.addEventListener('click', function() {
+  totalSpent = moneySpent.value
+  console.log(totalSpent)
+})
+
+// totalSpent = moneySpent.value;
+
+
+// Amount<input id= "money_spent" type="number"></input>
+// Bill Name<input id= "bill_name" type="string"></input>
+// <button type="button" id="money_spent_button">Save</button>
