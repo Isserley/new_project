@@ -1,6 +1,7 @@
 var moneyInput = document.getElementById('money_made');
 var moneyButton = document.getElementById('money_made_button');
 var totalMoney = 0;
+var totalGone = 0;
 
 moneyButton.addEventListener('click', function() {
   // when I click button, execute code inside this function
@@ -8,14 +9,19 @@ moneyButton.addEventListener('click', function() {
 console.log(totalMoney);
 });
 
-var moneySpent = document.getElementById('money_spent');
-var moneySpentButton = document.getElementById('money_spent_button');
-var totalSpent = 0;
+var moneySpent = document.getElementsByClassName('bill_input');
+var moneySpentButton = document.getElementById('total_spent_button');
+// var totalSpent = 0;
 
 moneySpentButton.addEventListener('click', function() {
-  totalSpent = moneySpent.value
-  console.log(totalSpent)
-})
+  for(var i = 0; i < moneySpent.length; i++){
+    var element = moneySpent[i];
+    console.log(element);
+    totalGone += parseInt(element.value);
+  }
+});
+console.log(totalGone);
+
 
 // totalSpent = moneySpent.value;
 
